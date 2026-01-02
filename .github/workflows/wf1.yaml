@@ -1,3 +1,6 @@
+name: WF1
+run-name: WF1 run by @${{ github.actor }}
+
 on:
   workflow_dispatch:
 
