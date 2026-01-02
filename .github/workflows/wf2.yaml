@@ -2,6 +2,9 @@ name: WF2 - Verify file
 
 on:
    workflow_dispatch:
+defaults:
+  run:
+    shell: bash
  
 jobs:
    verify:  
@@ -11,6 +14,6 @@ jobs:
      runs-on: ubuntu-latest
     
      steps:
-       - uses: actions/checkout@v3
+       - uses: actions/checkout@v6
        - run: |
            [[ -f ${{ vars.FILE_TO_CHECK }} ]] || ( echo "${{ vars.FILE_TO_CHECK }} file needs to be added to ${{ github.repository }} !" && exit 1 )
