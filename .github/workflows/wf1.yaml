@@ -2,7 +2,7 @@ on:
   workflow_dispatch:
 
 # you can set default values at the workflow or job levels for two system environment 
-# settings—the shell and working directory.
+# settings: the shell and working directory.
 defaults:
   run:
     shell: bash
