@@ -1,0 +1,20 @@
+on:
+  workflow_dispatch:
+
+# you can set default values at the workflow or job levels for two system environment 
+# settings—the shell and working directory.
+defaults:
+  run:
+    shell: bash
+    working-directory: workdir
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: sh
+        working-directory: test
+    steps:
+      - uses: actions/checkout@v6
+      - run: echo "in test"
