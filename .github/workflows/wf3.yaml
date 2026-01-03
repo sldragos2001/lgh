@@ -1,4 +1,4 @@
-name: WF3 - Outputs play
+name: WF3 - Steps outpus
 
 on:
    workflow_dispatch:
