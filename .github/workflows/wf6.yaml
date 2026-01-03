@@ -22,5 +22,8 @@ jobs:
           # Artifact name
           name: my-first-artifact
           # A file, directory or wildcard pattern that describes what to upload
-          path: path/to/artifact/world.txt
+          # a file
+          #path: path/to/artifact/world.txt
+          # a whole directory
+          path: path/to/artifact/
 
