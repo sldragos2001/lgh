@@ -1,4 +1,4 @@
-name: WF1
+name: WF1 - Defaults values
 run-name: WF1 run by @${{ github.actor }}
 
 on:
