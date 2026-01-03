@@ -10,6 +10,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v6
       - name: Conventional Changelog Action
         id: changelog
         uses: TriPSs/conventional-changelog-action@v6.2.0
