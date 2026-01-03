@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Conventional Changelog Action
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v6
+        uses: TriPSs/conventional-changelog-action@v6.2.0
 
       - name: Capture output from above step
         run: printf 'The artifact tag is %s\n' "${{ steps.changelog.outputs.version }}"
