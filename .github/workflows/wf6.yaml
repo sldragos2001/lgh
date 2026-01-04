@@ -1,4 +1,4 @@
-name: WF6 - Artifacts upload
+name: WF6 - Artifacts upload and download
 
 on:
    workflow_dispatch:
@@ -26,4 +26,24 @@ jobs:
           path: path/to/artifact/world.txt
           # a whole directory
           #path: path/to/artifact/
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6  
+      - run: |
+         mkdir -p path/to/downloadartifact
+         pwd
+         tree
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v7
+        with:
+          # Artifact name to download
+          name: my-first-artifact
+          path: path/to/download-artifact/
+      - name: Check the artifact content
+        run: |
+          pwd
+          tree
+          ls -l path/to/download-artifact/world.txt
+          cat path/to/download-artifact/world.txt
 
