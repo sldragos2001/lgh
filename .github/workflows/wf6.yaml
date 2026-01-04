@@ -27,6 +27,7 @@ jobs:
           # a whole directory
           #path: path/to/artifact/
   job2:
+    needs: job1
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6  
