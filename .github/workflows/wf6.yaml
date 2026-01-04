@@ -1,4 +1,4 @@
-name: WF6 - Artifacts
+name: WF6 - Artifacts upload
 
 on:
    workflow_dispatch:
@@ -23,7 +23,7 @@ jobs:
           name: my-first-artifact
           # A file, directory or wildcard pattern that describes what to upload
           # a file
-          #path: path/to/artifact/world.txt
+          path: path/to/artifact/world.txt
           # a whole directory
-          path: path/to/artifact/
+          #path: path/to/artifact/
 
