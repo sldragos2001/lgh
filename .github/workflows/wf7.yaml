@@ -1,0 +1,31 @@
+name: WF7 - Artifacts download
+
+on:
+   workflow_dispatch:
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6  
+      - run: |
+         mkdir -p path/to/downloadartifact
+         pwd
+         tree
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v7
+        with:
+          # Artifact name to download
+          name: my-first-artifact
+          # A file, directory or wildcard pattern that describes what to upload
+          # a file
+          path: path/to/download-artifact/world.txt
+      - name: Check the artifact content
+        run: |
+          pwd
+          tree
+          ls -l path/to/download-artifact/world.txt
+          cat path/to/download-artifact/world.txt
