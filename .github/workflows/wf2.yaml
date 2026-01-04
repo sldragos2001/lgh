@@ -16,6 +16,7 @@ jobs:
      steps:
        - uses: actions/checkout@v6
        - run: |
+           pwd
            ls -l
            tree
            [[ -f ${{ vars.FILE_TO_CHECK }} ]] || ( echo "${{ vars.FILE_TO_CHECK }} file needs to be added to ${{ github.repository }} !" && exit 1 )
