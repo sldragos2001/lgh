@@ -1,4 +1,4 @@
-name: WF6 - Workflow functions
+name: WF7 - Workflow functions
 
 on:
    workflow_dispatch:
